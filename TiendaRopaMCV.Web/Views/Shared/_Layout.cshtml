@@ -1,0 +1,7 @@
+@if (Session["Rol"] != null && Session["Rol"].ToString() == "Administrador")
+{
+    <a href="/Productos/Create">Productos</a>
+    <a href="/Categorias/Index">Categorías</a>
+}
+
+

@@ -1,0 +1,32 @@
+@model System.Data.DataTable
+
+<h2>Ventas por Fecha</h2>
+
+@using (Html.BeginForm())
+{
+    <input type="date" name="FechaInicio" required />
+    <input type="date" name="FechaFin" required />
+    <button type="submit">Consultar</button>
+}
+
+@if (Model != null)
+{
+<table border="1">
+    <tr>
+        <th>Factura</th>
+        <th>Fecha</th>
+        <th>Cliente</th>
+        <th>Total</th>
+    </tr>
+@foreach (System.Data.DataRow row in Model.Rows)
+{
+    <tr>
+        <td>@row["IdFactura"]</td>
+        <td>@row["Fecha"]</td>
+        <td>@row["Cliente"]</td>
+        <td>@row["Total"]</td>
+    </tr>
+}
+</table>
+}
+

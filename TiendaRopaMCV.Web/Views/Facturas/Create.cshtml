@@ -1,0 +1,26 @@
+<h2>Nueva Factura</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Cliente</label>
+    <input type="number" name="IdCliente" required />
+
+    <hr />
+
+    <table>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+        </tr>
+
+        <tr>
+            <td><input type="number" name="IdProducto" /></td>
+            <td><input type="number" name="Cantidad" /></td>
+            <td><input type="number" step="0.01" name="Precio" /></td>
+        </tr>
+    </table>
+
+    <button type="submit">Facturar</button>
+}
+

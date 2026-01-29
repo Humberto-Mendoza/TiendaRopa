@@ -1,0 +1,12 @@
+@using (Html.BeginForm("Create","Productos",
+    FormMethod.Post, new { enctype="multipart/form-data"}))
+{
+    <input type="text" name="Nombre" placeholder="Nombre" required />
+    <input type="number" step="0.01" name="Precio" />
+    <input type="number" name="Stock" />
+    <input type="number" step="0.01" name="Descuento" />
+    <input type="file" name="Imagen" />
+    <button type="submit">Guardar</button>
+}
+
+
